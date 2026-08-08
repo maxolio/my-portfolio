@@ -1,0 +1,18 @@
+# Зависимости
+node_modules/
+
+# Настройки WebStorm / IDE
+.idea/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Карты исходников Sass (Source Maps)
+*.map
+
+# Логи ошибок npm
+*.log
+
+# Файлы от Repomix
+repomix-output.*

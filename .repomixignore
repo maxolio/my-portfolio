@@ -1,0 +1,15 @@
+# Картинки и шрифты (бинарные файлы не нужны ИИ)
+images/
+icon/
+fonts/
+
+# Скомпилированный CSS (нейросети нужен только твой исходный main.scss)
+styles/*.css
+styles/*.css.map
+
+# Системные файлы и зависимости
+node_modules/
+package-lock.json
+.git/
+.idea/
+.gitignore
