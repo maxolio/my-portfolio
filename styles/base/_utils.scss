@@ -6,3 +6,6 @@
   margin-inline: auto;
 }
 
+.visually-hidden {
+  @include visually-hidden;
+}

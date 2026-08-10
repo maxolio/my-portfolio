@@ -1,0 +1,9 @@
+@use "../helpers" as *;
+
+.soc1a1s {
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(40, 20);
+  }
+}

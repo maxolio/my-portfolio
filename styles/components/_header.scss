@@ -1,7 +1,13 @@
 @use "../helpers" as *;
 
 .header {
-  padding-block: rem(20);
+  padding-block: rem(40);
+
+  margin-bottom: rem(30);
+
+  @include mobile {
+    padding-block: rem(20);
+  }
 
   &__inner {
     display: flex;

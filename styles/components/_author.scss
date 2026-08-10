@@ -1,0 +1,23 @@
+@use "../helpers" as *;
+
+
+.author {
+  display: flex;
+  align-items: center;
+  column-gap: fluid(20, 10);
+
+  &__image {
+    border-radius: 50%;
+    background-color: #a8a6a6;
+
+    @include mobile {
+      width: rem(60);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(2);
+  }
+}

@@ -9,11 +9,16 @@
   justify-content: space-between;
   width: rem(110);
   height: rem(50);
-  border: var(--border);
+  color: var(--button-color);
+  border: rem(2) solid currentColor;
   border-radius: rem(30);
   background-color: transparent;
   cursor: pointer;
   user-select: none;
+
+  @include hover {
+    color: var(--border-color);
+  }
 
   &::after {
     @include abs-y;
@@ -22,7 +27,7 @@
     content: "";
     height: rem(40);
     width: rem(40);
-    border: var(--border);
+    border: rem(2) solid currentColor;
     border-radius: 50%;
     //left: rem(6);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -43,7 +48,7 @@
     height: rem(40);
     color: var(--text-color);
     font-family: var(--font-family-accent), monospace;
-    font-weight: 500;
+    font-weight: 400;
     pointer-events: none; // Клик проходит сквозь текст на саму кнопку
   }
 

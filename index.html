@@ -22,8 +22,8 @@
             aria-checked="false"
             aria-label="Toggle Language"
             data-js-toggle-lang="ru">
-      <span class="toggle__lang">RU</span>
-      <span class="toggle__lang">EN</span>
+      <span class="toggle__lang">Ru</span>
+      <span class="toggle__lang">En</span>
     </button>
     <button class="header__toggle toggle toggle--theme"
             type="button"
@@ -61,13 +61,76 @@
   </div>
 </header>
 
-<main class="main container" >
-  <h1 data-i18n="title-1">Это текст который будет меняться 1</h1>
-  <h2 data-i18n="title-2">Это текст который будет меняться 2</h2>
-  <h3 data-i18n="title-3">Это текст который будет меняться 3</h3>
+<main class="main container">
+  <section class="hero">
+    <h1 class="visually-hidden">Портфолио Максима Владимировича</h1>
+    <div class="hero__author author">
+      <img class="author__image"
+           src="./images/author/Image.png"
+           alt="my portfolio photo"
+           width="80"
+           height="80"
+           loading="lazy"
+      />
+      <div class="author__body">
+        <h2 class="author__name h5">Максим Владимирович</h2>
+        <p class="author__profession">Начинающий фронтенд разработчик</p>
+      </div>
+    </div>
+    <div class="hero__bio">
+      <p data-i18n="heroBio1">Занимаюсь фронтенд-разработкой 1 год. Изучаю HTML, SCSS, JavaScript и современные инструменты сборки.
+      </p>
+      <p data-i18n="heroBio2">
+        Увлечен созданием быстрых, доступных и интуитивно понятных интерфейсов. Уделяю особое внимание чистоте кода и БЭМ-архитектуре.
+      </p>
+      <p data-i18n="heroBio3">
+        Проживаю в [Твой Город]. До IT имею опыт в [Твоя сфера/образование].
+      </p>
+    </div>
+    <div class="hero__soc1a1s soc1a1s">
+      <ul class="soc1a1s__list">
+        <li class="soc1a1s__item">
+          <a class="soc1a1s__link button"
+             href="https://github.com/maxolio"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="github">GitHub
+            <span class="button__icon">
+              <svg aria-hidden="true"
+                   width="24"
+                   height="24"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+            </span>
+          </a>
+        </li>
+        <li class="soc1a1s__item">
+          <a class="soc1a1s__link button"
+             href="#">Email
+            <span class="button__icon">
+              <svg aria-hidden="true"
+                   width="24"
+                   height="24"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
 </main>
-
-
 
 </body>
 </html>

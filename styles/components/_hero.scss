@@ -1,0 +1,17 @@
+@use "../helpers" as *;
+
+.hero {
+  margin-bottom: fluid(60, 30);
+
+  &__author {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__bio {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+}
