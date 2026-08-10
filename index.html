@@ -14,6 +14,60 @@
           defer></script>
 </head>
 <body>
+<header class="header">
+  <div class="header__inner container">
+    <button class="header__toggle toggle toggle--language"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-label="Toggle Language"
+            data-js-toggle-lang="ru">
+      <span class="toggle__lang">RU</span>
+      <span class="toggle__lang">EN</span>
+    </button>
+    <button class="header__toggle toggle toggle--theme"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-label="Toggle Theme"
+            data-js-theme-toggle="dark">
+      <span class="toggle__theme">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             class="lucide lucide-moon-icon lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" /></svg>
+      </span>
+      <span class="toggle__theme">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             class="lucide lucide-sun-icon lucide-sun"><circle cx="12"
+                                                               cy="12"
+                                                               r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></svg>
+      </span>
+    </button>
+  </div>
+</header>
+
+<main class="main container" >
+  <h1 data-i18n="title-1">Это текст который будет меняться 1</h1>
+  <h2 data-i18n="title-2">Это текст который будет меняться 2</h2>
+  <h3 data-i18n="title-3">Это текст который будет меняться 3</h3>
+</main>
+
+
 
 </body>
 </html>

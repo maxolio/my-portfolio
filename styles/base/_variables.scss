@@ -1,0 +1,26 @@
+@use "../helpers" as *;
+
+:root {
+
+  --bacground-color: #191919;
+  --text-color: #c0c7c5;
+  --border-color: #a8a6a6;
+  --color-accent: #c09c24;
+
+
+  --font-family-base: 'Golos Text', sans-serif;
+  --font-family-accent: 'Fira Code', monospace;
+
+  --transition-duration: 0.2s;
+
+  --container-width: #{rem(640)};
+  --container-padding-x: #{rem(16)};
+
+  --border: #{rem(2)} solid var(--border-color);
+}
+
+
+[data-theme="light"] {
+  --bacground-color: #f8f9fa;
+  --text-color: #0f172a;
+}

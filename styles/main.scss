@@ -1,3 +1,8 @@
-body {
-  background-color: #041e1e;
+@use "base/index";
+
+@use "components/toggle";
+@use "components/header";
+
+main {
+  //display: none;
 }

@@ -1,0 +1,50 @@
+@use "../helpers" as *;
+
+.toggle {
+  position: relative;
+  padding: 0;
+  padding-inline: rem(3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: rem(110);
+  height: rem(50);
+  border: var(--border);
+  border-radius: rem(30);
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+
+  &::after {
+    @include abs-y;
+
+    position: absolute;
+    content: "";
+    height: rem(40);
+    width: rem(40);
+    border: var(--border);
+    border-radius: 50%;
+    //left: rem(6);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &[aria-checked="true"]::after {
+    transform: translateY(-50%) translateX(rem(60));
+  }
+
+  &__lang,
+  &__theme {
+    position: relative;
+    //z-index: 2; // Выносим текст поверх ползунка
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(40);
+    height: rem(40);
+    color: var(--text-color);
+    font-family: var(--font-family-accent), monospace;
+    font-weight: 500;
+    pointer-events: none; // Клик проходит сквозь текст на саму кнопку
+  }
+
+}

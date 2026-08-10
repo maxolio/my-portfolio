@@ -1,0 +1,12 @@
+@use "../helpers" as *;
+
+.header {
+  padding-block: rem(20);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: rem(10);
+  }
+}
