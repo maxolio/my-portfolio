@@ -1,0 +1,14 @@
+@use "../helpers" as *;
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: rem(10);
+
+  svg {
+    @include square(rem(20));
+
+    color: currentColor;
+  }
+}

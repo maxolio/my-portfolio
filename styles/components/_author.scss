@@ -7,8 +7,9 @@
   column-gap: fluid(20, 10);
 
   &__image {
+    border: rem(2) solid var(--border-color);
     border-radius: 50%;
-    background-color: #a8a6a6;
+    background-color: #282525;
 
     @include mobile {
       width: rem(60);

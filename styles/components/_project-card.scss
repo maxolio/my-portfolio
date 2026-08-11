@@ -1,0 +1,44 @@
+@use "../helpers" as *;
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: fluid(30, 20);
+  padding: rem(10);
+
+  border: rem(2) solid var(--button-color);
+  border-radius: rem(8);
+  background-color: rgb(255 255 255 / 0.1);
+
+  &__image {
+    border-radius: rem(5);
+  }
+
+  &__info {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: start;
+    padding-right: rem(40);
+    color: var(--color-light);
+
+
+    @include hover {
+      color: var(--color-accent);
+    }
+
+  }
+
+  &__description {
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: rem(5);
+  }
+}

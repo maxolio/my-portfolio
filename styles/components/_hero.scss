@@ -1,7 +1,7 @@
 @use "../helpers" as *;
 
 .hero {
-  margin-bottom: fluid(60, 30);
+  margin-bottom: fluid(80, 60);
 
   &__author {
     &:not(:last-child) {

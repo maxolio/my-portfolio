@@ -1,0 +1,59 @@
+@use "../helpers" as *;
+
+.tabs {
+  &__header {
+    border-top: var(--border);
+    padding-block: fluid(40, 20);
+    overflow-x: auto;
+  }
+
+  &__buttons {
+    display: inline-flex;
+    align-items: start;
+    justify-content: center;
+    column-gap: fluid(30, 20);
+    width: max-content;
+  }
+
+  &__button {
+    padding: fluid(20, 10) rem(10);
+    color: var(--text-color);
+    background-color: transparent;
+    border: var(--border);
+    border-radius: rem(8);
+
+    &.is-active {
+      font-weight: 500;
+      color: var(--color-light);
+      background-color: var(--button-color);
+    }
+  }
+
+  &__body {
+    border: var(--border);
+    padding: 1rem;
+    border-radius: rem(8);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(50);
+    max-height: rem(800);
+    overflow-y: auto;
+
+    scrollbar-width: none;
+
+  }
+
+
+  &__content {
+    &:not(.is-active) {
+      display: none;
+    }
+
+    &:focus-visible {
+      outline-offset: -0.5rem;
+    }
+  }
+}
