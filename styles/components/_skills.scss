@@ -1,0 +1,44 @@
+@use "../helpers" as *;
+
+.skills {
+
+  &__title {
+    font-family: var(--font-family-accent), monospace;
+    padding-block: fluid(40, 20);
+    border-top: var(--border);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+    padding-bottom: fluid(80, 40);
+  }
+
+  &__item {
+    @include fluid-text(20, 16);
+
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-family: var(--font-family-accent), monospace;
+  }
+
+  &__status {
+    &--done {
+      color: var(--color-green);
+    }
+
+    &--process {
+      color: var(--color-yellow);
+    }
+
+    &--planned {
+      color: var(--color-blue);
+    }
+  }
+}

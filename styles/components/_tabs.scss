@@ -21,6 +21,7 @@
     background-color: transparent;
     border: var(--border);
     border-radius: rem(8);
+    font-family: var(--font-family-accent), monospace;
 
     &.is-active {
       font-weight: 500;
@@ -30,8 +31,6 @@
   }
 
   &__body {
-    border: var(--border);
-    padding: 1rem;
     border-radius: rem(8);
   }
 
@@ -39,21 +38,12 @@
     display: flex;
     flex-direction: column;
     row-gap: rem(50);
-    max-height: rem(800);
-    overflow-y: auto;
-
-    scrollbar-width: none;
-
   }
 
 
   &__content {
     &:not(.is-active) {
       display: none;
-    }
-
-    &:focus-visible {
-      outline-offset: -0.5rem;
     }
   }
 }

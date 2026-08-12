@@ -4,10 +4,15 @@
 
   --bacground-color: #191919;
   --text-color: #c0c7c5;
-  --border-color: #a8a6a6;
+  --border-color: #7a7171;
   --color-accent: #c09c24;
   --color-light: #faf6f6;
-  --button-color: #5d5757;
+  --button-color: #7e7474;
+  --color-green: #287a28;
+  --color-yellow: #d9b929;
+  --color-blue: #178eda;
+  --bacground-card: rgb(255 255 255 / 0.1);
+  --button-color-light: #c7c4c4;
 
 
   --font-family-base: 'Golos Text', sans-serif;
@@ -23,6 +28,13 @@
 
 
 [data-theme="light"] {
-  --bacground-color: #f8f9fa;
-  --text-color: #0f172a;
+  --bacground-color: #c8c6c1;
+  --text-color: #2c2b29;
+  --border-color: #2f2c29;
+  --color-accent: #b85d14;
+  --color-light: #141312;
+  --button-color: #5c5a55;
+  --button-color-light: #181818;
+  --color-yellow: #e77b03;
+  --bacground-card: rgb(115 112 97 / 0.5);
 }

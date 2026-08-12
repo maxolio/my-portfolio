@@ -4,6 +4,7 @@
   &__list {
     display: flex;
     align-items: center;
+    justify-content: end;
     column-gap: fluid(40, 20);
   }
 }

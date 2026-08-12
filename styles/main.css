@@ -246,10 +246,15 @@ svg * {
 :root {
   --bacground-color: #191919;
   --text-color: #c0c7c5;
-  --border-color: #a8a6a6;
+  --border-color: #7a7171;
   --color-accent: #c09c24;
   --color-light: #faf6f6;
-  --button-color: #5d5757;
+  --button-color: #7e7474;
+  --color-green: #287a28;
+  --color-yellow: #d9b929;
+  --color-blue: #178eda;
+  --bacground-card: rgb(255 255 255 / 0.1);
+  --button-color-light: #c7c4c4;
   --font-family-base: 'Golos Text', sans-serif;
   --font-family-accent: 'Fira Code', monospace;
   --transition-duration: 0.2s;
@@ -259,8 +264,15 @@ svg * {
 }
 
 [data-theme=light] {
-  --bacground-color: #f8f9fa;
-  --text-color: #0f172a;
+  --bacground-color: #c8c6c1;
+  --text-color: #2c2b29;
+  --border-color: #2f2c29;
+  --color-accent: #b85d14;
+  --color-light: #141312;
+  --button-color: #5c5a55;
+  --button-color-light: #181818;
+  --color-yellow: #e77b03;
+  --bacground-card: rgb(115 112 97 / 0.5);
 }
 
 .container {
@@ -282,6 +294,10 @@ svg * {
   overflow: hidden !important;
 }
 
+.color-green {
+  color: #389f1e;
+}
+
 .color-orange-html {
   color: #E34F26;
 }
@@ -299,7 +315,7 @@ svg * {
 }
 
 body {
-  font-size: clamp(0.875rem, 0.8112745098rem + 0.2614379085vw, 1.125rem);
+  font-size: clamp(1rem, 0.9681372549rem + 0.1307189542vw, 1.125rem);
   font-family: var(--font-family-base), sans-serif;
   font-weight: 400;
   color: var(--text-color);
@@ -430,7 +446,6 @@ a[class] {
 
 .header {
   padding-block: 2.5rem;
-  margin-bottom: 1.875rem;
 }
 @media (width <= 40.06125rem) {
   .header {
@@ -474,7 +489,7 @@ a[class] {
   width: 80%;
 }
 .button--lite {
-  color: var(--border-color);
+  color: var(--button-color-light);
 }
 
 .author {
@@ -501,11 +516,13 @@ a[class] {
 .soc1a1s__list {
   display: flex;
   align-items: center;
+  justify-content: end;
   column-gap: clamp(1.25rem, 0.931372549rem + 1.3071895425vw, 2.5rem);
 }
 
 .hero {
-  margin-bottom: clamp(3.75rem, 3.431372549rem + 1.3071895425vw, 5rem);
+  padding-block: clamp(2.5rem, 1.862745098rem + 2.614379085vw, 5rem);
+  border-top: var(--border);
 }
 .hero__author:not(:last-child) {
   margin-bottom: 1.875rem;
@@ -544,6 +561,7 @@ a[class] {
   background-color: transparent;
   border: var(--border);
   border-radius: 0.5rem;
+  font-family: var(--font-family-accent), monospace;
 }
 .tabs__button.is-active {
   font-weight: 500;
@@ -551,23 +569,15 @@ a[class] {
   background-color: var(--button-color);
 }
 .tabs__body {
-  border: var(--border);
-  padding: 1rem;
   border-radius: 0.5rem;
 }
 .tabs__list {
   display: flex;
   flex-direction: column;
   row-gap: 3.125rem;
-  max-height: 50rem;
-  overflow-y: auto;
-  scrollbar-width: none;
 }
 .tabs__content:not(.is-active) {
   display: none;
-}
-.tabs__content:focus-visible {
-  outline-offset: -0.5rem;
 }
 
 .tags {
@@ -583,7 +593,7 @@ a[class] {
   padding: 0.625rem;
   border: 0.125rem solid var(--button-color);
   border-radius: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--bacground-card);
 }
 .project-card__image {
   border-radius: 0.3125rem;
@@ -596,24 +606,46 @@ a[class] {
   padding-right: 2.5rem;
   color: var(--color-light);
 }
-@media (any-hover: hover) {
-  .project-card__info:hover {
-    color: var(--color-accent);
-  }
-}
-@media (any-hover: none) {
-  .project-card__info:active {
-    color: var(--color-accent);
-  }
-}
-.project-card__description:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
 .project-card__links {
   display: flex;
   align-items: center;
   justify-content: space-between;
   column-gap: 0.3125rem;
+}
+
+.section-tabs {
+  margin-bottom: clamp(3.75rem, 3.431372549rem + 1.3071895425vw, 5rem);
+}
+
+.skills__title {
+  font-family: var(--font-family-accent), monospace;
+  padding-block: clamp(1.25rem, 0.931372549rem + 1.3071895425vw, 2.5rem);
+  border-top: var(--border);
+}
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.625rem;
+  padding-bottom: clamp(2.5rem, 1.862745098rem + 2.614379085vw, 5rem);
+}
+.skills__item {
+  font-size: clamp(1rem, 0.9362745098rem + 0.2614379085vw, 1.25rem);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills__name {
+  font-family: var(--font-family-accent), monospace;
+}
+.skills__status--done {
+  color: var(--color-green);
+}
+.skills__status--process {
+  color: var(--color-yellow);
+}
+.skills__status--planned {
+  color: var(--color-blue);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -13,6 +13,7 @@
           type="module"
           defer></script>
 </head>
+
 <body>
 <header class="header">
   <div class="header__inner container">
@@ -63,28 +64,34 @@
 
 <main class="main container">
   <section class="hero">
-    <h1 class="visually-hidden">Портфолио Максима Владимировича</h1>
+    <h1 class="visually-hidden"
+        data-i18n="pageTitle">Портфолио Максима Владимировича
+    </h1>
     <div class="hero__author author">
       <img class="author__image"
-           src="./images/author/Image.png"
+           src="./images/author/photo.jpg"
            alt="my portfolio photo"
            width="80"
            height="80"
            loading="lazy"
       />
       <div class="author__body">
-        <h2 class="author__name h5">Максим Владимирович</h2>
-        <p class="author__profession">Начинающий фронтенд разработчик</p>
+        <h2 class="author__name h5"
+            data-i18n="authorName">Максим Владимирович
+        </h2>
+        <p class="author__profession"
+           data-i18n="authorProfession">Начинающий фронтенд разработчик
+        </p>
       </div>
     </div>
     <div class="hero__bio">
-      <p data-i18n="heroBio1">Занимаюсь фронтенд-разработкой 1 год. Изучаю HTML, SCSS, JavaScript и современные инструменты сборки.
+      <p data-i18n="heroBio1">С июля 2025 года я системно изучаю фронтенд-разработку и подвожу итоги первого года. За это время я прошел путь от базовой верстки до создания интерактивных веб-приложений на чистом JavaScript.
       </p>
       <p data-i18n="heroBio2">
-        Увлечен созданием быстрых, доступных и интуитивно понятных интерфейсов. Уделяю особое внимание чистоте кода и БЭМ-архитектуре.
+        Сфокусирован на написании чистого, валидного и доступного (a11y) кода. Активно использую методологию БЭМ и модульный SCSS, что помогает формировать компонентное мышление и создавать масштабируемые интерфейсы.
       </p>
       <p data-i18n="heroBio3">
-        Проживаю в [Твой Город]. До IT имею опыт в [Твоя сфера/образование].
+        Сейчас углубляю знания в экосистеме React, использую Vite и генератор Minista (JSX) для создания как динамических приложений, так и быстрой статической верстки.
       </p>
     </div>
     <div class="hero__soc1a1s soc1a1s">
@@ -111,7 +118,8 @@
         </li>
         <li class="soc1a1s__item">
           <a class="soc1a1s__link button"
-             href="#">Email
+             href="mailto:teardbro@gmail.com"
+             aria-label="Email">Email
             <span class="button__icon">
               <svg aria-hidden="true"
                    width="24"
@@ -133,19 +141,21 @@
   <section class="section-tabs tabs"
            data-js-tabs>
     <h2 class="visually-hidden"
-        id="project-category-title">Project category
+        id="project-category-title"
+        data-i18n="projectCategoryTitle">Категория проектов
     </h2>
     <header class="tabs__header">
       <div class="tabs__buttons"
            role="tablist"
-           aria-labelledby="blog-category-title">
+           aria-labelledby="project-category-title">
         <button class="tabs__button is-active"
                 id="tab-1"
                 role="tab"
                 aria-controls="tabpanel-1"
                 type="button"
                 aria-selected="true"
-                data-js-tabs-button>Учебные сайты
+                data-js-tabs-button
+                data-i18n="tabEducationalProjects">Учебные проекты
         </button>
         <button class="tabs__button"
                 id="tab-2"
@@ -154,16 +164,8 @@
                 type="button"
                 aria-selected="false"
                 tabindex="-1"
-                data-js-tabs-button>Учебные компоненты
-        </button>
-        <button class="tabs__button"
-                id="tab-3"
-                role="tab"
-                aria-controls="tabpanel-3"
-                type="button"
-                aria-selected="false"
-                tabindex="-1"
-                data-js-tabs-button>Мои проекты
+                data-js-tabs-button
+                data-i18n="tabMyProjects">Мои проекты
         </button>
       </div>
     </header>
@@ -185,21 +187,24 @@
                    loading="lazy"
               />
               <div class="project-card__info">
-                <h3 class="project-card__title h5 ">Сайт Future-Tech
+                <h3 class="project-card__title h5"
+                    data-i18n="projectFutureTechTitle">Сайт Future-Tech
                 </h3>
-                <p class="project-card__description">Сайт о новых технологиях и ИИ
+                <p class="project-card__description"
+                   data-i18n="projectFutureTechDesc">Сайт о новых технологиях и ИИ
                 </p>
               </div>
-                <ul class="project-card__tags tags">
-                  <li class="tags__item color-orange-html">HTML</li>
-                  <li class="tags__item color-pink-scss">CSS / SCSS</li>
-                  <li class="tags__item color-blue-bem">BEM</li>
-                  <li class="tags__item color-yellow-js">JS</li>
-                </ul>
+              <ul class="project-card__tags tags">
+                <li class="tags__item color-orange-html">HTML</li>
+                <li class="tags__item color-pink-scss">CSS / SCSS</li>
+                <li class="tags__item color-blue-bem">BEM</li>
+                <li class="tags__item color-yellow-js">JS</li>
+              </ul>
               <div class="project-card__links">
                 <a class="project-card__link button button--lite"
                    href="https://github.com/maxolio/future-tech"
-                   target="_blank">GitHub | Code
+                   target="_blank"
+                   rel="noopener noreferrer">GitHub | Code
                   <span class="button__icon">
               <svg aria-hidden="true"
                    width="24"
@@ -215,7 +220,8 @@
                 </a>
                 <a class="project-card__link button button--lite"
                    href="https://maxolio.github.io/future-tech/"
-                   target="_blank">Site
+                   target="_blank"
+                   rel="noopener noreferrer">Site
                   <span class="button__icon">
               <svg aria-hidden="true"
                    width="24"
@@ -242,21 +248,24 @@
                    loading="lazy"
               />
               <div class="project-card__info">
-                <h3 class="project-card__title h5 ">Сайт CROSSFIT
+                <h3 class="project-card__title h5"
+                    data-i18n="projectCrossfitTitle">Сайт CROSSFIT
                 </h3>
-                <p class="project-card__description">Cайт (лендинг) для фитнес-клуба.
+                <p class="project-card__description"
+                   data-i18n="projectCrossfitDesc">Cайт (лендинг) для фитнес-клуба.
                 </p>
               </div>
-                <ul class="project-card__tags tags">
-                  <li class="tags__item color-orange-html">HTML</li>
-                  <li class="tags__item color-pink-scss">CSS / SCSS</li>
-                  <li class="tags__item color-blue-bem">BEM</li>
-                  <li class="tags__item color-yellow-js">JS</li>
-                </ul>
+              <ul class="project-card__tags tags">
+                <li class="tags__item color-orange-html">HTML</li>
+                <li class="tags__item color-pink-scss">CSS / SCSS</li>
+                <li class="tags__item color-blue-bem">BEM</li>
+                <li class="tags__item color-yellow-js">JS</li>
+              </ul>
               <div class="project-card__links">
                 <a class="project-card__link button button--lite"
                    href="https://github.com/maxolio/cross-fit-site"
-                   target="_blank">GitHub | Code
+                   target="_blank"
+                   rel="noopener noreferrer">GitHub | Code
                   <span class="button__icon">
               <svg aria-hidden="true"
                    width="24"
@@ -272,7 +281,8 @@
                 </a>
                 <a class="project-card__link button button--lite"
                    href="https://maxolio.github.io/cross-fit-site/"
-                   target="_blank">Site
+                   target="_blank"
+                   rel="noopener noreferrer">Site
                   <span class="button__icon">
               <svg aria-hidden="true"
                    width="24"
@@ -299,21 +309,24 @@
                    loading="lazy"
               />
               <div class="project-card__info">
-                <h3 class="project-card__title h5 ">Сайт POSITIVUS
+                <h3 class="project-card__title h5"
+                    data-i18n="projectPositivusTitle">Сайт POSITIVUS
                 </h3>
-                <p class="project-card__description">Лендинг для маркетингового агентства.
+                <p class="project-card__description"
+                   data-i18n="projectPositivusDesc">Лендинг для маркетингового агентства.
                 </p>
               </div>
-                <ul class="project-card__tags tags">
-                  <li class="tags__item color-orange-html">HTML</li>
-                  <li class="tags__item color-pink-scss">CSS / SCSS</li>
-                  <li class="tags__item color-blue-bem">BEM</li>
-                  <li class="tags__item color-yellow-js">JS</li>
-                </ul>
+              <ul class="project-card__tags tags">
+                <li class="tags__item color-orange-html">HTML</li>
+                <li class="tags__item color-pink-scss">CSS / SCSS</li>
+                <li class="tags__item color-blue-bem">BEM</li>
+                <li class="tags__item color-yellow-js">JS</li>
+              </ul>
               <div class="project-card__links">
                 <a class="project-card__link button button--lite"
                    href="https://github.com/maxolio/positivus-final"
-                   target="_blank">GitHub | Code
+                   target="_blank"
+                   rel="noopener noreferrer">GitHub | Code
                   <span class="button__icon">
               <svg aria-hidden="true"
                    width="24"
@@ -329,7 +342,8 @@
                 </a>
                 <a class="project-card__link button button--lite"
                    href="https://maxolio.github.io/positivus-final/"
-                   target="_blank">Site
+                   target="_blank"
+                   rel="noopener noreferrer">Site
                   <span class="button__icon">
               <svg aria-hidden="true"
                    width="24"
@@ -346,7 +360,6 @@
               </div>
             </article>
           </li>
-
         </ul>
       </div>
       <div class="tabs__content"
@@ -355,19 +368,133 @@
            tabindex="0"
            role="tabpanel"
            data-js-tabs-content>
-        22222
+        <ul class="tabs__list">
+          <li class="tabs__item">
+            <article class="project-card">
+              <img class="project-card__image"
+                   src="./images/project-card/portfolio.jpg"
+                   alt=""
+                   width="626"
+                   height="412"
+                   loading="lazy"
+              />
+              <div class="project-card__info">
+                <h3 class="project-card__title h5"
+                    data-i18n="projectPortfolioTitle">Сайт My Portfolio
+                </h3>
+                <p class="project-card__description"
+                   data-i18n="projectPortfolioDesc">Сайт - Мое портфолио.
+                </p>
+              </div>
+              <ul class="project-card__tags tags">
+                <li class="tags__item color-orange-html">HTML</li>
+                <li class="tags__item color-pink-scss">CSS / SCSS</li>
+                <li class="tags__item color-blue-bem">BEM</li>
+                <li class="tags__item color-yellow-js">JS</li>
+              </ul>
+              <div class="project-card__links">
+                <a class="project-card__link button button--lite"
+                   href="https://github.com/maxolio/my-portfolio"
+                   target="_blank"
+                   rel="noopener noreferrer">GitHub | Code
+                  <span class="button__icon">
+              <svg aria-hidden="true"
+                   width="24"
+                   height="24"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+            </span>
+                </a>
+                <a class="project-card__link button button--lite"
+                   href="#">Site
+                  <span class="button__icon">
+              <svg aria-hidden="true"
+                   width="24"
+                   height="24"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="2"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+            </span>
+                </a>
+              </div>
+            </article>
+          </li>
+        </ul>
       </div>
-      <div class="tabs__content"
-           id="tabpanel-3"
-           aria-labelledby="tab-3"
-           tabindex="0"
-           role="tabpanel"
-           data-js-tabs-content>
-        333333
-      </div>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2 class="skills__title h4"
+        data-i18n="skillsTitle">Навыки и карта развития:
+    </h2>
+
+    <div class="skills__group">
+      <ul class="skills__list">
+        <!-- Освоенные навыки -->
+        <li class="skills__item">
+          <span class="skills__name">HTML5 / Семантика</span>
+          <span class="skills__status skills__status--done"
+                data-i18n="statusDone">Освоено</span>
+        </li>
+        <li class="skills__item">
+          <span class="skills__name">CSS3 / SCSS / БЭМ</span>
+          <span class="skills__status skills__status--done"
+                data-i18n="statusDone">Освоено</span>
+        </li>
+        <li class="skills__item">
+          <span class="skills__name">JavaScript (ES6+, DOM, Async)</span>
+          <span class="skills__status skills__status--done"
+                data-i18n="statusDone">Освоено</span>
+        </li>
+        <li class="skills__item">
+          <span class="skills__name">Веб-доступность (W3C / a11y)</span>
+          <span class="skills__status skills__status--done"
+                data-i18n="statusDone">Освоено</span>
+        </li>
+        <li class="skills__item">
+          <span class="skills__name">Git / GitHub Workflow</span>
+          <span class="skills__status skills__status--done"
+                data-i18n="statusDone">Освоено</span>
+        </li>
+
+        <!-- В процессе изучения -->
+        <li class="skills__item">
+          <span class="skills__name">Vite / Minista / JSX</span>
+          <span class="skills__status skills__status--process"
+                data-i18n="statusProcess">В процессе</span>
+        </li>
+        <li class="skills__item">
+          <span class="skills__name">React.js</span>
+          <span class="skills__status skills__status--process"
+                data-i18n="statusProcess">В процессе</span>
+        </li>
+
+        <!-- В планах (Roadmap) -->
+        <li class="skills__item">
+          <span class="skills__name">TypeScript</span>
+          <span class="skills__status skills__status--planned"
+                data-i18n="statusPlanned">В планах</span>
+        </li>
+        <li class="skills__item">
+          <span class="skills__name">Next.js & State Management</span>
+          <span class="skills__status skills__status--planned"
+                data-i18n="statusPlanned">В планах</span>
+        </li>
+      </ul>
     </div>
   </section>
 </main>
 
 </body>
+
 </html>

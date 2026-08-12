@@ -8,7 +8,7 @@
 
   border: rem(2) solid var(--button-color);
   border-radius: rem(8);
-  background-color: rgb(255 255 255 / 0.1);
+  background-color: var(--bacground-card);
 
   &__image {
     border-radius: rem(5);
@@ -22,17 +22,6 @@
     padding-right: rem(40);
     color: var(--color-light);
 
-
-    @include hover {
-      color: var(--color-accent);
-    }
-
-  }
-
-  &__description {
-    &:not(:last-child) {
-      margin-bottom: rem(8);
-    }
   }
 
   &__links {
